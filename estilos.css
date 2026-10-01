@@ -1,0 +1,81 @@
+
+
+ 
+header{
+    background-color: #67c9f0;
+    border-bottom: 3xp solid #AAB234;
+    padding: 10px 20px;
+    border-radius: 25px;
+
+}
+    .header-container{
+     display: flex; /*ubicar un elemwnto al lado de otro*/
+     justify-content: space-between; /*reparte la ubicacion de los */
+     align-items: center;
+     max-height: 1100px;
+     margin: 0 auto;
+
+     }
+
+
+
+.logo{ 
+      font-size: 20px;
+      font-weight: bold;/*negritas*/
+      color:  #BC8F8F;
+             }
+
+nav ul{
+    list-style: none;/*quitar viñetas*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;/*separar elementos*/
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #6278E;
+   font-weight: 600;
+   padding: 8px 12px ;
+   border-radius: 4px;
+   transition: background-color 2s, color 0.5s;
+}
+nav ul li a :hover {
+
+    background-color: #F87C63;
+    color: ;
+}
+
+footer {
+background-color: #1e293b; /* Azul oscuro */
+color: #cbd5e1;
+padding: 20px;
+font-size: 14px;
+clear both:;
+}
+
+.footer-container {
+max-width: 1000px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between; /* Texto a la izquierda, contacto a la derecha */
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.footer-container p {
+margin: 0;
+}
+
+.footer-container a {
+color: #38bdf8; /* Celeste para resaltar los enlaces directos */
+text-decoration: none;
+}
+
+.footer-container a:hover {
+text-decoration: underline;
+}
+
+

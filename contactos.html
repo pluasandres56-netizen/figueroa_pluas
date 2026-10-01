@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fichas de Andrés Pluas y Juliana Figueroa</title>
+    <link rel="stylesheet"type="text/css" href="css/estilos.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        footer {
+background-color: #1e293b; /* Azul oscuro */
+color: #cbd5e1;
+padding: 20px;
+font-size: 14px;
+clear both:;
+}
+
+.footer-container {
+max-width: 1000px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between; /* Texto a la izquierda, contacto a la derecha */
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.footer-container p {
+margin: 0;
+}
+
+.footer-container a {
+color: #38bdf8; /* Celeste para resaltar los enlaces directos */
+text-decoration: none;
+}
+
+.footer-container a:hover {
+text-decoration: underline;
+}
+
+        body {
+            min-height: 100vh;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ffded6, #dce8f0);
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* =========================
+           TARJETAS
+        ========================= */
+
+        .tarjeta {
+            width: 100%;
+            min-height: 500px;
+            display: grid;
+            grid-template-columns: 42% 58%;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* =========================
+           PERFIL DE ANDRÉS
+        ========================= */
+
+        .andres .perfil {
+            background: linear-gradient(160deg, #ff6940, #eaf4ff);
+        }
+
+        .andres .foto {
+            border: 5px solid rgba(255, 0, 10, 0.7);
+        }
+
+        .andres .nombre {
+            color: rgba(255, 0, 10, 0.7);
+        }
+
+        /* =========================
+           PERFIL DE JULIANA
+        ========================= */
+
+        .juliana .perfil {
+            background: linear-gradient(160deg,#008080,#eaf4ff);
+        }
+
+        .juliana .foto {
+            border: 4px solid white;
+            outline: 3px solid #75a9d0;
+        }
+
+        .juliana .nombre {
+            color: #00639b;
+        }
+
+        /* =========================
+           PERFIL
+        ========================= */
+
+        .perfil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .foto {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 5px;
+            background: white;
+            margin-bottom: 25px;
+        }
+
+        .nombre {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .profesion {
+            color: #333;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .genero {
+            margin-top: 20px;
+            font-size: 30px;
+            color: #555;
+        }
+
+        /* =========================
+           INFORMACIÓN
+        ========================= */
+
+        .informacion {
+            padding: 45px;
+            background: white;
+            color: #333;
+        }
+
+        .dato {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .icono {
+            min-width: 45px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 21px;
+        }
+
+        .andres .icono {
+            background: rgba(255, 52, 0, 0.7);
+        }
+
+        .juliana .icono {
+            background: #e8f4fc;
+        }
+
+        .dato strong {
+            margin-right: 5px;
+        }
+
+        /* =========================
+           SEPARADOR DE ANDRES
+        ========================= */
+
+        .separador {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+
+        .andres .separador {
+            border-top-color: rgba(255, 52, 0, 0.7);
+        }
+
+/* =========================
+           SEPARADOR DE JULIANA
+        ========================= */
+
+        .separador {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+
+        .juliana .separador {
+            border-top-color:rgba(0, 191, 255, 0.7); }
+
+        /* =========================
+           REDES SOCIALES
+        ========================= */
+
+        .redes h2 {
+            font-size: 26px;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .red {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .red-icono {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 12px;
+            margin-right: 15px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .instagram {
+            background: linear-gradient(
+                45deg,
+                #feda75,
+                #d62976,
+                #4f5bd5
+            );
+        }
+
+        .tiktok {
+            background: linear-gradient(
+                45deg,
+                #69c9d0,
+                #ee1d52,
+                #000000
+            );
+        }
+
+        .red a {
+            color: #00639b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .red a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           MENSAJE DE ANDRÉS
+        ========================= */
+
+        .mensaje {
+            margin-top: 30px;
+            padding: 20px 0;
+            border-top: 2px dotted #f0a5bd;
+            color: #444;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .tarjeta {
+                grid-template-columns: 1fr;
+            }
+
+            .perfil {
+                padding: 35px 20px;
+            }
+
+            .informacion {
+                padding: 30px 25px;
+            }
+
+            .foto {
+                width: 190px;
+                height: 190px;
+            }
+
+            .nombre {
+                font-size: 32px;
+            }
+
+            .profesion {
+                font-size: 18px;
+            }
+
+            .redes h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dato {
+                align-items: flex-start;
+                font-size: 16px;
+            }
+
+            .icono {
+                min-width: 40px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .red {
+                font-size: 16px;
+            }
+
+            .red-icono {
+                width: 43px;
+                height: 43px;
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Servicios de Psicologia</div>
+            <nav>
+                 <img src="imag_logo.jpg" width="160px" height="100px">
+
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contactos.html"> contactos</a>
+                    </li>
+                    <li><a href="servicios.html"> servicios</a></li>
+
+                </ul> 
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- =========================
+             FICHA DE ANDRÉS
+        ========================== -->
+
+        <section class="tarjeta andres">
+
+            <div class="perfil">
+
+                <img
+                    src="foto_1.jpeg"
+                    alt="Foto de Andrés Pluas"
+                    class="foto"
+                >
+
+                <h1 class="nombre">Andrés Pluas</h1>
+
+                <p class="profesion">
+                    Ingeniero en ciberseguridad y hacker ético
+                </p>
+
+                <div class="genero" aria-label="Masculino">
+                    ♂
+                </div>
+
+            </div>
+
+            <div class="informacion">
+
+                <div class="dato">
+                    <span class="icono">📍</span>
+                    <div>
+                        <strong>Ubicación:</strong>
+                        Guayaquil, Ecuador
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">✉️</span>
+                    <div>
+                        <strong>Correo:</strong>
+                        pluasandres56@gmail.com
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">📞</span>
+                    <div>
+                        <strong>Teléfono:</strong>
+                        0963385436
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">🌐</span>
+                    <div>
+                        <strong>Web:</strong>
+                        www.andrespluasinterfaces.com
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">📅</span>
+                    <div>
+                        <strong>Cumpleaños:</strong>
+                        29 de abril de 2010
+                    </div>
+                </div>
+
+                <hr class="separador">
+
+                <div class="redes">
+
+                    <h2>¡Sígueme en mis Redes Sociales!</h2>
+
+                    <div class="red">
+                        <span class="red-icono instagram">◎</span>
+
+                        <div>
+                            <strong>Instagram:</strong>
+                            <a
+                                href="https://www.instagram.com/pluas8869?igsh=d2pocWg5N2NueXQ1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                @pluas8869
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="red">
+                        <span class="red-icono tiktok">♪</span>
+
+                        <div>
+                            <strong>TikTok:</strong>
+                            <a
+                                href="https://www.tiktok.com/@andrspluas16"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                @andrspluas16
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mensaje">
+                    Cada esfuerzo de hoy ayuda a cumplir nuestras metas
+                    mañana ⚽
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FICHA DE JULIANA
+        ========================== -->
+
+        <section class="tarjeta juliana">
+
+            <div class="perfil">
+
+                <img
+                    src="foto.img.jpeg"
+                    alt="Foto de Juliana Figueroa"
+                    class="foto"
+                >
+
+                <h1 class="nombre">Juliana Figueroa</h1>
+
+                <p class="profesion">
+                    Psicóloga y Abogada-tu te metes yo te saco
+                </p>
+
+            </div>
+
+            <div class="informacion">
+
+                <div class="dato">
+                    <span class="icono">📍</span>
+                    <div>
+                        <strong>Ubicación:</strong>
+                        Guayaquil, Ecuador
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">✉️</span>
+                    <div>
+                        <strong>Correo:</strong>
+                        jamilethfigueroaizquierdo06@gmail.com
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">📞</span>
+                    <div>
+                        <strong>Teléfono:</strong>
+                        0969772934
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <span class="icono">🎂</span>
+                    <div>
+                        <strong>Cumpleaños:</strong>
+                        17 de junio
+                    </div>
+                </div>
+
+                <hr class="separador">
+
+                <div class="redes">
+
+                    <h2>¡Sígueme en mis Redes Sociales!</h2>
+
+                    <div class="red">
+                        <span class="red-icono instagram">◎</span>
+
+                        <div>
+                            <strong>Instagram:</strong>
+                            @leth___kzx
+                        </div>
+                    </div>
+
+                    <div class="red">
+                        <span class="red-icono tiktok">♪</span>
+
+                        <div>
+                            <strong>TikTok:</strong>
+                            @juja__x
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+ <footer>
+<div class="footer-container">
+<p>&copy; 2026 Juliana figueroa - Psicologia Profesional a Domicilio.</p>
+<p>📍 Guayaquil| 📞 <a href="tel:+593 969772934">+593 969772934</a> | ✉️ <a href="elena@enfermeria.com"> jamilethfigueroaizquierdo06@gmail.com</a></p>
+</div>
+</footer>
+</body>
+</html>
